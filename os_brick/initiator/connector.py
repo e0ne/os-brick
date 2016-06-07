@@ -1965,7 +1965,8 @@ class RBDConnector(BaseLinuxConnector):
 
         rbd_client = linuxrbd.RBDClient(user, pool)
         rbd_volume = linuxrbd.RBDVolume(rbd_client, volume)
-        rbd_handle = linuxrbd.RBDVolumeIOWrapper(rbd_volume)
+        rbd_handle = linuxrbd.RBDVolumeIOWrapper(
+            linuxrbd.RBDImageMetadata(rbd_volume, pool, user, None))
         return rbd_handle
 
     def connect_volume(self, connection_properties):
