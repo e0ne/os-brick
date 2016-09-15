@@ -154,3 +154,11 @@ class InvalidIOHandleObject(BrickException):
 class VolumeEncryptionNotSupported(Invalid):
     message = _("Volume encryption is not supported for %(volume_type)s "
                 "volume %(volume_id)s.")
+
+
+class NVMeRPCException(BrickException):
+    message = _("RPC exception: %(message)s.")
+
+
+class NVMeParamException(BrickException):
+    message = _("Param validation exception: %(validation_message)s.")

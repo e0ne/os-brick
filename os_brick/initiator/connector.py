@@ -93,6 +93,7 @@ connector_list = [
     'os_brick.initiator.connectors.scaleio.ScaleIOConnector',
     'os_brick.initiator.connectors.disco.DISCOConnector',
     'os_brick.initiator.connectors.vmware.VmdkConnector',
+    'os_brick.initiator.connectors.nvme.NVMeConnector',
     'os_brick.initiator.windows.base.BaseWindowsConnector',
     'os_brick.initiator.windows.iscsi.WindowsISCSIConnector',
     'os_brick.initiator.windows.fibre_channel.WindowsFCConnector',
@@ -142,7 +143,9 @@ _connector_mapping_linux = {
         'os_brick.initiator.connectors.vmware.VmdkConnector',
     initiator.GPFS:
         'os_brick.initiator.connectors.gpfs.GPFSConnector',
-
+    initiator.NVME:
+        'os_brick.initiator.connectors.nvme.NVMeConnector',
+    'RDMA': 'os_brick.initiator.connectors.nvme.NVMeConnector',
 }
 
 # Mapping for the S390X platform
