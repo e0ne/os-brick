@@ -44,7 +44,6 @@ from six.moves import urllib
 from os_brick import exception
 from os_brick import executor
 from os_brick import utils
-
 from os_brick.initiator import host_driver
 from os_brick.initiator import linuxfc
 from os_brick.initiator import linuxrbd
