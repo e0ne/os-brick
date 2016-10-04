@@ -5,7 +5,6 @@
 !.testr.conf
 
 *.py[cod]
-
 # C extensions
 *.so
 
