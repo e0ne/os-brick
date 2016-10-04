@@ -18,7 +18,6 @@
 The connectors here are responsible for discovering and removing volumes for
 each of the supported transport protocols.
 """
-
 import abc
 import copy
 import glob
